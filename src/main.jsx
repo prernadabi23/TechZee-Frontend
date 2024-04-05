@@ -5,6 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signup from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
+import SideBar from "./components/SideBar.jsx";
+import AllPosts from "./pages/AllPosts.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/posts",
+    element: <AllPosts />,
   },
 ]);
 
