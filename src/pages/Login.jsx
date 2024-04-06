@@ -83,6 +83,7 @@ const Login = () => {
     }
     const tokens = data.data.tokens;
     localStorage.setItem("tokens", JSON.stringify(tokens));
+    localStorage.setItem("role", data.data.role);
     console.log(data);
     console.log(localStorage.getItem("tokens"));
     navigate("/");
