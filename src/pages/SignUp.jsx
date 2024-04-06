@@ -14,8 +14,7 @@ const Signup = () => {
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   // eslint-disable-next-line no-control-regex
-  const isValidEmail =
-    /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+  const isValidEmail =/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 
   const isValidPassword =
     /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
@@ -65,6 +64,7 @@ const Signup = () => {
         name: signupDetails.name,
         email: signupDetails.email,
         password: signupDetails.password,
+        role: isChecked ? "teacher" : "student",
       }),
     }).catch((error) => {
       setError("Error creating account", error);
@@ -78,6 +78,7 @@ const Signup = () => {
       setError("Error creating account");
       return;
     }
+    console.log(signupDetails);
 
     const data = await res.json();
     if (data.status == false) {
@@ -86,7 +87,14 @@ const Signup = () => {
     }
     const tokens = data.data.tokens;
     localStorage.setItem("tokens", JSON.stringify(tokens));
+    console.log(data);
     navigate("/");
+  };
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
   };
 
   return (
@@ -242,6 +250,41 @@ const Signup = () => {
                     name="password"
                     placeholder="············"
                   />
+                </div>
+                <div className="relative mt-2 flex flex-col w-full flex-wrap items-stretch">
+                  <div className="flex justify-between">
+                    <label
+                      className="mb-2 inline-block text-xs font-medium uppercase text-gray-700"
+                      htmlFor="password"
+                    >
+                      Want to register as a teacher ?
+                    </label>
+                  </div>
+                  <label className="flex items-center cursor-pointer">
+                    <div className="relative flex justify-center items-center">
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={handleToggle}
+                        className="hidden"
+                      />
+                      <div
+                        className={`${
+                          isChecked ? "bg-blue-400" : "bg-gray-400"
+                        } toggle__line w-8 h-4 rounded-full shadow-inner`}
+                      ></div>
+                      <div
+                        className={`toggle__dot absolute w-4 h-4 bg-white rounded-full shadow left-0 top-0 transition ${
+                          isChecked
+                            ? "transform translate-x-full bg-green-400"
+                            : ""
+                        }`}
+                      ></div>
+                    </div>
+                    <div className="ml-3 text-blue-300 font-medium">
+                      {isChecked ? "Teacher" : "Student"}
+                    </div>
+                  </label>
                 </div>
               </div>
 

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import SideBar from "../components/SideBar";
 import Nav from "../components/Nav";
 import MainBar from "../components/MainBar";
 
 function Dashboard() {
   const [open, setOpen] = useState(false);
+
   return (
     <div className="flex flex-col">
       <div>
@@ -28,7 +29,7 @@ function Dashboard() {
           <div className="hidden sm:block">
             <SideBar />
           </div>
-            <MainBar />
+          <MainBar />
         </div>
       </div>
     </div>
