@@ -5,8 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signup from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
-import SideBar from "./components/SideBar.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import SearchClass from "./components/SearchClass.jsx";
 
 const router = createBrowserRouter([
   {
