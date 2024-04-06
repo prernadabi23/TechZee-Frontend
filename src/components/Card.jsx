@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Card() {
   return (
@@ -6,11 +7,11 @@ function Card() {
       <div>Title</div>
       <div>Description</div>
       <div>Instructor: Ankur Yadav</div>
-      <div className="flex items-center justify-center">
+      <Link to="/class/123" className="flex items-center justify-center">
         <button className="bg-blue-600 text-white px-2 py-1 rounded-lg">
-          Join Class
+          Visit Class
         </button>
-      </div>
+      </Link>
     </div>
   );
 }

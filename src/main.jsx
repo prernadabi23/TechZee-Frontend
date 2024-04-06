@@ -7,6 +7,8 @@ import Signup from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import SearchClass from "./components/SearchClass.jsx";
+import RoomPage from "./pages/RoomPage.jsx";
+import Class from "./pages/Class.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/class/:classId",
+    element: <Class />,
+  },
+  {
+    path: "/room/:roomId",
+    element: <RoomPage />,
   },
 ]);
 

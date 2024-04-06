@@ -10,7 +10,7 @@ function SideBar({ open, setOpen, page, setPage }) {
     >
       <div className="flex flex-col items-center justify-center mt-20">
         <img src="/person.png" alt="profile" width={150} />
-        <div>yankur2002@gmail.com</div>
+        <div>Ankur Yadav</div>
         <div>Memeber Since: 1990</div>
       </div>
       <div className="flex flex-col ml-2">
@@ -19,7 +19,7 @@ function SideBar({ open, setOpen, page, setPage }) {
           onClick={() => setPage(0)}
         >
           <MdSpaceDashboard />
-          <h2>Dashboard</h2>
+          <h2>Join Class</h2>
         </Link>
         <Link
           onClick={() => setPage(1)}
