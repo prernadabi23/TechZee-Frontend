@@ -86,6 +86,8 @@ const Signup = () => {
     }
     const tokens = data.data.tokens;
     localStorage.setItem("tokens", JSON.stringify(tokens));
+    localStorage.setItem("role", data.data.role);
+
     navigate("/");
   };
 
