@@ -163,7 +163,7 @@ const Signup = () => {
             <div className="mb-6 flex flex-shrink-0 flex-grow-0 items-center justify-center overflow-hidden">
               <a
                 href="#"
-                className="flex cursor-pointer items-center gap-2 text-purple-500 no-underline hover:text-purple-500"
+                className="flex cursor-pointer items-center gap-2 text-blue-500 no-underline hover:text-blue-500"
               >
                 <span className="flex-shrink-0 text-3xl font-black tracking-tight opacity-100">
                   Hash Media
@@ -188,7 +188,7 @@ const Signup = () => {
                   }}
                   value={signupDetails.name}
                   type="text"
-                  className="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-purple-500 focus:bg-white focus:text-gray-600 focus:shadow"
+                  className="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-blue-500 focus:bg-white focus:text-gray-600 focus:shadow"
                   id="name"
                   name="name"
                   placeholder="Enter your name"
@@ -211,7 +211,7 @@ const Signup = () => {
                   }}
                   value={signupDetails.email}
                   type="text"
-                  className="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-purple-500 focus:bg-white focus:text-gray-600 focus:shadow"
+                  className="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-blue-500 focus:bg-white focus:text-gray-600 focus:shadow"
                   id="email"
                   name="email"
                   placeholder="Enter your email"
@@ -238,7 +238,7 @@ const Signup = () => {
                     value={signupDetails.password}
                     type="password"
                     id="password"
-                    className="relative block flex-auto cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-purple-500 focus:bg-white focus:text-gray-600 focus:shadow"
+                    className="relative block flex-auto cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-blue-500 focus:bg-white focus:text-gray-600 focus:shadow"
                     name="password"
                     placeholder="············"
                   />
@@ -252,7 +252,7 @@ const Signup = () => {
               <div className="mb-4">
                 {!submitButtonDisabled ? (
                   <button
-                    className="grid w-full cursor-pointer select-none rounded-md border border-purple-500 bg-purple-500 py-2 px-5 text-center align-middle text-sm text-white shadow hover:border-purple-600 hover:bg-purple-600 hover:text-white focus:border-purple-600 focus:bg-purple-600 focus:text-white focus:shadow-none"
+                    className="grid w-full cursor-pointer select-none rounded-md border border-blue-500 bg-blue-500 py-2 px-5 text-center align-middle text-sm text-white shadow hover:border-blue-600 hover:bg-blue-600 hover:text-white focus:border-blue-600 focus:bg-blue-600 focus:text-white focus:shadow-none"
                     type="submit"
                   >
                     Sign Up
@@ -291,7 +291,7 @@ const Signup = () => {
               Already have an account?
               <Link
                 to="/login"
-                className="cursor-pointer text-purple-500 no-underline hover:text-purple-500"
+                className="cursor-pointer text-blue-500 no-underline hover:text-blue-500"
               >
                 {" "}
                 Sign in

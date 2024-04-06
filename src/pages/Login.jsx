@@ -125,7 +125,7 @@ const Login = () => {
             />
           </svg>
         </div>
-        <div className="hidden sm:block h-28 w-28 text-purple-500 absolute a-z-10 -right-20 -bottom-20">
+        <div className="hidden sm:block h-28 w-28 text-blue-500 absolute a-z-10 -right-20 -bottom-20">
           <svg
             id="patternId"
             width="100%"
@@ -164,7 +164,7 @@ const Login = () => {
             <div className="mb-6 flex flex-shrink-0 flex-grow-0 items-center justify-center overflow-hidden">
               <a
                 href="#"
-                className="flex cursor-pointer items-center gap-2 text-purple-500 no-underline hover:text-purple-500"
+                className="flex cursor-pointer items-center gap-2 text-blue-500 no-underline hover:text-blue-500"
               >
                 <span className="flex-shrink-0 text-3xl font-black tracking-tight opacity-100">
                   Hash Media
@@ -206,7 +206,7 @@ const Login = () => {
                   </label>
                   <a
                     href="auth-forgot-password-basic.html"
-                    className="cursor-pointer text-purple-500 no-underline hover:text-purple-500"
+                    className="cursor-pointer text-blue-500 no-underline hover:text-blue-500"
                   >
                     <small className=" ">Forgot Password?</small>
                   </a>
@@ -234,20 +234,20 @@ const Login = () => {
               <div className="mb-4">
                 {!submitButtonDisabled ? (
                   <button
-                    className="grid w-full cursor-pointer select-none rounded-md border border-purple-500 bg-purple-500 py-2 px-5 text-center align-middle text-sm text-white shadow hover:border-purple-600 hover:bg-purple-600 hover:text-white focus:border-purple-600 focus:bg-purple-600 focus:text-white focus:shadow-none"
+                    className="grid w-full cursor-pointer select-none rounded-md border border-blue-500 bg-blue-500 py-2 px-5 text-center align-middle text-sm text-white shadow hover:border-blue-600 hover:bg-blue-600 hover:text-white focus:border-blue-600 focus:bg-blue-600 focus:text-white focus:shadow-none"
                     type="submit"
                   >
                     Sign In
                   </button>
                 ) : (
                   <button
-                    className=" w-full  select-none rounded-md border border-purple-500 bg-purple-500 py-2 px-5 flex justify-center items-center gap-3 text-sm text-white shadow cursor-not-allowed "
+                    className=" w-full  select-none rounded-md border border-blue-500 bg-blue-500 py-2 px-5 flex justify-center items-center gap-3 text-sm text-white shadow cursor-not-allowed "
                     type="submit"
                   >
                     <div role="status">
                       <svg
                         aria-hidden="true"
-                        className="w-8 h-8 text-gray-200 animate-spin dark:text-white fill-purple-500"
+                        className="w-8 h-8 text-gray-200 animate-spin dark:text-white fill-blue-500"
                         viewBox="0 0 100 101"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@ const Login = () => {
               New on futurism?
               <Link
                 to="/signup"
-                className="cursor-pointer text-purple-500 no-underline hover:text-purple-500"
+                className="cursor-pointer text-blue-500 no-underline hover:text-blue-500"
               >
                 {" "}
                 Create an account

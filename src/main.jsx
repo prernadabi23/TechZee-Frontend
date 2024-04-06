@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signup from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
 import SideBar from "./components/SideBar.jsx";
-import AllPosts from "./pages/AllPosts.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/posts",
-    element: <AllPosts />,
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
 

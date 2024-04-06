@@ -1,19 +1,36 @@
 import React from "react";
-import HashMediaIcon from "/signn.png";
-import LogoutIcon from "/logout.png";
-import ActivtyIcon from "/user.png";
-
-function SideBar() {
+import { FaSearch } from "react-icons/fa";
+import { MdSpaceDashboard } from "react-icons/md";
+import { Link } from "react-router-dom";
+function SideBar({ open, setOpen }) {
   return (
-    <div className="flex flex-col gap-3 items-center justify-start py-4 w-16 border-2 h-screen">
-      <div className="">
-        <img src={HashMediaIcon} alt="Hashmedia" width="30" />
+    <div style={{height:"89vh"}} className="shadow-lg w-56 bg-gray-50 mt-1 border-2">
+      <div className="flex flex-col items-center justify-center mt-20">
+        <img src="/person.png" alt="profile" width={150} />
+        <div>yankur2002@gmail.com</div>
+        <div>Memeber Since: 1990</div>
       </div>
-      <div className="">
-        <img src={ActivtyIcon} alt="Activty" width="30" />
-      </div>
-      <div className="">
-        <img src={LogoutIcon} alt="Logout" width="30" />
+      <div className="flex flex-col ml-2">
+        <Link
+          to="/dashboard"
+          className="flex items-center justify-start ml-5 text-xl gap-2 mt-5"
+        >
+          <MdSpaceDashboard />
+          <h2>Dashboard</h2>
+        </Link>
+        <Link
+          to="/searchclass"
+          className="flex items-center text-xl justify-start gap-2 ml-5 mt-3"
+        >
+          <FaSearch />
+          <h2>Search Class</h2>
+        </Link>
+        <div
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded sm:hidden"
+          onClick={() => setOpen(false)}
+        >
+          Close
+        </div>
       </div>
     </div>
   );
